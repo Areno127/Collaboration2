@@ -19,8 +19,12 @@ public class ComputerGuessGame {
     public static void main(String[] args) {
         Scanner k = new Scanner(System.in);
         Words word = new Words();
-        String newWord = word.getWord();
+        int num = word.getnum();
+        int incorectCounter = 0;
+        String newWord = word.getWord(num);
+        String hint = word.getHint(num);
         boolean won = false;
+        
         System.out.println("guess the word it has " + newWord.length() + " letters");
         while(!won){
             String guess = k.nextLine();
@@ -29,13 +33,20 @@ public class ComputerGuessGame {
                 won = true;
                 System.out.println("would you like to play agian y for yes n for no");
                 if(k.nextLine().equalsIgnoreCase("y")){
+                    incorectCounter = 0;
                     won = false;
-                    newWord = word.getWord();
+                    num = word.getnum();
+                    newWord = word.getWord(num);
+                    hint = word.getWord(num);
                     System.out.println("guess the word it has " + newWord.length() + " letters");
                 }
             }
             else{
                 System.out.println("guess agian the word still has " + newWord.length() + " letters");
+                incorectCounter+=1;
+                if(incorectCounter >= 3){
+                    System.out.println("hint: " + hint);
+                }
             }
             
         }
