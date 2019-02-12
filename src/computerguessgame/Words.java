@@ -12,7 +12,7 @@ import java.util.Random;
  * @author Owner
  */
 public class Words {
-    private String[] wordArr = {"apple", "dragon", "word", "fun", "run", "winning", "yeet", "pickle", "rick", "ron", "swonson", "fruit", "bannana", "papaya"};
+    private String[] wordArr = {"apple", "dragon",       "word",    "fun",      "run",    "winning",       "yeet",      "pickle",       "rick",          "ron",       "swonson",  "fruit",     "bannana", "papaya"};
     private String[] hintArr = {"fruit", "mythical creature", "___ game", "having ___", "exercise", "oppisite of losing", "dead meme", "rick was  a ___", "___ was  a pickle", "___ swonson", "ron ____",  "apple is a", "is a fruit", "another type of meme fruit"};
 
     public int getnum() {
