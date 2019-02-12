@@ -47,6 +47,10 @@ public class ComputerGuessGame {
                 if(incorectCounter >= 3){
                     System.out.println("hint: " + hint);
                 }
+                else if(incorectCounter>10){
+                    System.out.print("You have failed. The word was " + newWord);
+                    return;
+                }
             }
             
         }
