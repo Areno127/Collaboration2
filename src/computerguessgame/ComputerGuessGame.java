@@ -39,7 +39,7 @@ public class ComputerGuessGame {
                 System.out.println("guess agian the word still has " + newWord.length() + " letters");
                 incorectCounter+=1;
                 if(incorectCounter>10){
-                    System.out.println("You have failed. The word was " + newWord);
+                    incorectCounter = 0;
                     System.out.println("would you like to play agian y for yes n for no");
                     newGame = k.nextLine();
                 }
